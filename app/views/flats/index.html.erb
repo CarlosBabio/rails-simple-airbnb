@@ -1,0 +1,27 @@
+<h1 class="pt-3">All our flats</h1>
+<p>The <%= @flats.count %> flats</p>
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="col-sm-4">
+      <div class="card mt-4">
+        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text fst-italic"><%= flat.address %></p>
+          <p class="card-text"><%= flat.description %></p>
+          <div class="card-text d-flex justify-space-between">
+            <div class="area">
+              <i class="material-icons p-1">person</i><%= flat.number_of_guests %>
+            </div>
+            <div class="area">
+              <i class="material-icons p-1">attach_money</i><%= flat.price_per_night %>
+            </div>
+          </div>
+          <%= link_to "More details", flats_path, class:"btn btn-info" %>
+          <%= link_to "Edit", flats_path, class:"btn btn-warning" %>
+          <%= link_to "Remove", flats_path, class:"btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>

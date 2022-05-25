@@ -1,0 +1,25 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.banner {
+ height: 800px;
+ background-image: url("https://picsum.photos/1100/500");
+ background-repeat: no-repeat;
+ background-size: cover;
+ color: white;
+}
+
+.banner h1 {
+  height: fit-content;
+}
